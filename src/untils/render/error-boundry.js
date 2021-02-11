@@ -5,9 +5,9 @@ export const errorBoundry = (msg) => {
 
     errorWrapper.setAttribute('class', 'error');
     errorTitle.setAttribute('class', 'error__title');
-    errorClose.setAttribute('class', 'btn error__button');
+    errorClose.setAttribute('class', 'error__button');
 
-    errorTitle.textContent = msg;
+    errorTitle.innerHTML = `<span class='error__warn'>Error</span> - ${msg}`;
     errorClose.innerHTML = '&#x2613;'
 
     errorWrapper.append(errorTitle);
