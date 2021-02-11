@@ -1,2 +1,41 @@
 @import './styles/normalize';
 @import './styles/reset';
+@import './styles/error';
+@import './styles/header';
+@import './styles/modal';
+@import './styles/new-event';
+@import './styles/table';
+
+body {
+    background-image: url(https://source.unsplash.com/random);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    font-family: 'Open-sans', sans-serif;
+}
+
+.btn {
+    width: 120px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    -o-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+    outline: none;
+    &:hover {
+        background-position: 100% 0;
+        -o-transition: all .3s ease-in-out;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+    }
+}
+ 

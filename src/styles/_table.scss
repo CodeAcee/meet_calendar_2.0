@@ -1,0 +1,30 @@
+table {
+    margin: 50px auto;
+    --primary-neon:rgba(49, 196, 190, 0.75);
+    --light-neon:rgba(49, 196, 190, 0.65);
+    --pulse-neon:rgba(49, 196, 190, 0.35);
+    --bright-neon:rgba(49, 196, 190, 0.25);
+    --off-neon:#333;
+    
+    --neon-shadow:0 0 7px 4px var(--light-neon), 0 0 7px 4px var(--light-neon) inset;
+    --neon-shadow-pulse:0 0 8px 5px var(--pulse-neon), 0 0 8px 5px var(--pulse-neon) inset;
+    --neon-shadow-bright:0 0 8px 4px var(--bright-neon), 0 0 8px 4px var(--bright-neon) inset;
+    --neon-shadow-text:0 0 7px var(--primary-neon);
+    
+    border:3px solid var(--primary-neon);
+    border-radius:5px;
+    font-weight:bold;
+    box-shadow:var(--neon-shadow);
+    animation:flicker 10s linear infinite;
+    background-color: rgb(56, 56, 56);
+}
+
+td,
+th {
+  color: #fff;
+  width: 245px;
+  height: 65px;
+  border: 1px solid black;
+  vertical-align: middle;
+  text-align: center;
+}

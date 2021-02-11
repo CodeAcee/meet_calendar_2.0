@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px 0;
+    background-color: rgb(56, 56, 56);
+
+    &__title {
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 10px;
+        margin-top: 20px;
+        color: white;
+    }
+
+    &__select {
+      width: 200px;
+      height: 40px;
+      border-radius: 50px;
+      outline: none;
+    }
+
+    &__button {
+        margin-left: 20px;
+    }
+}
