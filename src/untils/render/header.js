@@ -2,6 +2,7 @@ import { users } from '../constant';
 
 export const header = () => {
     const headerWrapper = document.createElement('div');
+    const headerControl = document.createElement('div');
     const headerTitle = document.createElement('h1');
     const headerSelect = document.createElement('select');
     const headerEventButton = document.createElement('button');
@@ -9,7 +10,9 @@ export const header = () => {
     headerWrapper.setAttribute('class', 'header');
     headerTitle.setAttribute('class', 'header__title');
     headerSelect.setAttribute('class', 'header__select');
-    headerEventButton.setAttribute('class', 'header__button');
+    headerEventButton.setAttribute('class', 'btn header__button');
+    headerControl.setAttribute('class', 'header__controls');
+
 
     headerTitle.textContent = 'Meet Calendar';
     headerEventButton.textContent = 'New event +';
@@ -26,9 +29,10 @@ export const header = () => {
     
     headerSelect.append(...option);
 
+    headerControl.append(headerSelect);
+    headerControl.append(headerEventButton);
     headerWrapper.append(headerTitle);
-    headerWrapper.append(headerSelect);
-    headerWrapper.append(headerEventButton);
+    headerWrapper.append(headerControl);
 
     return headerWrapper;
 }
