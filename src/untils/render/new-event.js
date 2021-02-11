@@ -35,11 +35,10 @@ export const newEvent = () => {
   usersSelectLabel.setAttribute('id', 'js-choise');
 
   buttonwrapper.setAttribute('class', 'event__buttons');
+  closeEvent.setAttribute('class', 'btn event__button--no');
   addEvent.setAttribute('class', 'btn event__button--yes');
   addEvent.setAttribute('type', 'submit');
-
-  closeEvent.setAttribute('class', 'btn event__button--no');
-
+  
   nameInputLabel.textContent = 'Add name event:';
   timeSelectLabel.textContent = 'Choose a time:';
   daysSelectLabel.textContent = 'Choose a day:';
