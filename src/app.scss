@@ -4,14 +4,15 @@
 @import './styles/header';
 @import './styles/modal';
 @import './styles/new-event';
+@import './styles/table';
 
-// body {
-//     background-image: url(https://source.unsplash.com/random);
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     background-position: center center;
-//     font-family: 'Open-sans', sans-serif;
-// }
+body {
+    background-image: url(https://source.unsplash.com/random);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    font-family: 'Open-sans', sans-serif;
+}
 
 .btn {
     width: 120px;
