@@ -13,7 +13,6 @@ export const modal = (name) => {
     modalBtnYes.textContent = 'Yes';
     modalBtnNo.textContent = 'No';
 
-
     modalWrapper.append(modalTitle);
     modalWrapper.append(modalBtnYes);
     modalWrapper.append(modalBtnNo);

@@ -1,8 +1,9 @@
+import { users } from '../constant';
+
 export const header = () => {
     const headerWrapper = document.createElement('div');
     const headerTitle = document.createElement('h1');
     const headerSelect = document.createElement('select');
-    const headerOptionName = ['Maria', 'Bob', 'Jonh', 'Anastatya','Petya'];
     const headerEventButton = document.createElement('button');
 
     headerWrapper.setAttribute('class', 'header');
@@ -13,7 +14,7 @@ export const header = () => {
     headerTitle.textContent = 'Meet Calendar';
     headerEventButton.textContent = 'New event +';
 
-    const option = headerOptionName.map(item => {
+    const option = users.map(item => {
         const headerOption = document.createElement('option');
         headerOption.setAttribute('value', item);
         headerOption.textContent = item;
