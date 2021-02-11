@@ -2,7 +2,7 @@ export const header = () => {
     const headerWrapper = document.createElement('div');
     const headerTitle = document.createElement('h1');
     const headerSelect = document.createElement('select');
-    const headerOptionName = ['Maria', 'Bob', 'Jonh', 'Anastatya'];
+    const headerOptionName = ['Maria', 'Bob', 'Jonh', 'Anastatya','Petya'];
     const headerEventButton = document.createElement('button');
 
     headerWrapper.setAttribute('class', 'header');
@@ -10,13 +10,13 @@ export const header = () => {
     headerSelect.setAttribute('class', 'header__select');
     headerEventButton.setAttribute('class', 'header__button');
 
-    headerTitle.innerHTML = 'Meet Calendar';
-    headerEventButton.innerHTML = 'New event +';
+    headerTitle.textContent = 'Meet Calendar';
+    headerEventButton.textContent = 'New event +';
 
     const option = headerOptionName.map(item => {
         const headerOption = document.createElement('option');
         headerOption.setAttribute('value', item);
-        headerOption.innerHTML = item;
+        headerOption.textContent = item;
         headerSelect.append(headerOption);
     })
 
