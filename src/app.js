@@ -8,9 +8,6 @@ import { events } from './modules/events';
 
 document.getElementById('root').append(header())
 document.getElementById('root').append(errorBoundry('Place is booked try to use another place'))
-document.getElementById('root').append(modal('one to one'))
+document.getElementById('root').append(modal())
 document.getElementById('root').append(newEvent())
 document.getElementById('root').append(table())
-
-
-

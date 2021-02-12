@@ -1,4 +1,6 @@
 import { data, times, days } from '../constant';
+import { toogleState } from '../../modules/index';
+import { modal } from './modal';
 
 export const table = () => {
   const table = document.createElement('table');
@@ -30,6 +32,13 @@ export const table = () => {
   tableHead.append(tableHeadRow);
   table.append(tableHead);
   table.append(tableBody);
+
+  table.addEventListener('click', (e) => {
+    e.preventDefault();
+    toogleState('.modal');
+    modal(e.target.textContent);
+  })
+  
 
   return table;
 }

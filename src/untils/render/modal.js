@@ -1,3 +1,5 @@
+import { toogleState } from '../../modules/index';
+
 export const modal = (name) => {
     const modalWrapper = document.createElement('div');
     const btnWrapper = document.createElement('div');
@@ -21,6 +23,14 @@ export const modal = (name) => {
     btnWrapper.append(modalBtnNo);
     modalWrapper.append(modalTitle);
     modalWrapper.append(btnWrapper);
+
+    modalBtnNo.addEventListener('click', () => {
+        toogleState('.modal')
+    })
+
+    modalBtnYes.addEventListener('click', () => {
+        toogleState('.modal')
+    })
 
     return modalWrapper;
 }   
