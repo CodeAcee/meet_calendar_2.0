@@ -1,5 +1,18 @@
 import { users, days, times } from '../constant';
 import { toogleState } from '../../modules/index';
+import { v4 as uuidv4 } from 'uuid';
+import { saveData } from '../../modules/newEvent';
+
+const getData = (nameEvent, timeEvent, dayEvent, userEvent) => {
+  const data = {
+    name: nameEvent.value,
+    time: timeEvent.value,
+    day: dayEvent.value,
+    users: userEvent.value,
+    id: uuidv4()
+  }
+  saveData(data);
+}
 
 export const newEvent = () => {
   const eventWrapper = document.createElement('div');
@@ -84,6 +97,13 @@ export const newEvent = () => {
     e.preventDefault();
     toogleState('.event');
   })
+
+  addEvent.addEventListener('click', (e) => {
+    e.preventDefault();
+    toogleState('.event');
+    getData(nameInput, timeSelect, daysSelect, usersSelect);
+  })
+
 
   return eventWrapper
 }
