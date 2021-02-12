@@ -1,4 +1,5 @@
 import { users } from '../constant';
+import { toogleState } from '../../modules/index';
 
 export const header = () => {
     const headerWrapper = document.createElement('div');
@@ -13,10 +14,11 @@ export const header = () => {
     headerEventButton.setAttribute('class', 'btn header__button');
     headerControl.setAttribute('class', 'header__controls');
 
-
     headerTitle.textContent = 'Meet Calendar';
     headerEventButton.textContent = 'New event +';
-
+    headerEventButton.addEventListener('click', () => {
+        toogleState('.event');
+    })
     const option = users.map(item => {
         const headerOption = document.createElement('option');
         headerOption.setAttribute('value', item);

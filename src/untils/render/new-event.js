@@ -1,4 +1,5 @@
 import { users, days, times } from '../constant';
+import { toogleState } from '../../modules/index';
 
 export const newEvent = () => {
   const eventWrapper = document.createElement('div');
@@ -78,6 +79,11 @@ export const newEvent = () => {
 
   eventWrapper.append(eventForm);
   eventWrapper.append(buttonwrapper);
+
+  closeEvent.addEventListener('click', (e) => {
+    e.preventDefault();
+    toogleState('.event');
+  })
 
   return eventWrapper
 }
