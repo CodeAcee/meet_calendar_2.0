@@ -1,6 +1,5 @@
 import { users, days, times } from '../constant';
 import { toogleState } from '../../modules/index';
-import { choices } from '../../modules/multiselect';
 
 export const newEvent = () => {
   const eventWrapper = document.createElement('div');

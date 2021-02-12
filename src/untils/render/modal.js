@@ -4,7 +4,6 @@ export const modal = (name) => {
     const modalWrapper = document.createElement('div');
     const btnWrapper = document.createElement('div');
     const modalTitle = document.createElement('p');
-    
     const modalBtnYes = document.createElement('button');
     const modalBtnNo = document.createElement('button');
 
@@ -31,6 +30,6 @@ export const modal = (name) => {
     modalBtnYes.addEventListener('click', () => {
         toogleState('.modal')
     })
-
     return modalWrapper;
 }   
+

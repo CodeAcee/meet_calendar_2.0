@@ -33,12 +33,12 @@ export const table = () => {
   table.append(tableHead);
   table.append(tableBody);
 
-  table.addEventListener('click', (e) => {
-    e.preventDefault();
+  table.onclick = (e) => {
+    let target = e.target.textContent
+    modal(target);
+    console.log(target);
     toogleState('.modal');
-    modal(e.target.textContent);
-  })
+  };
   
-
   return table;
 }
