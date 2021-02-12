@@ -19,6 +19,10 @@ table {
     background-color: rgb(56, 56, 56);
 }
 
+.hasTitle {
+  background-color: var(--light-neon);
+}
+
 td,
 th {
   color: #fff;

@@ -5,10 +5,10 @@ import { saveData } from '../../modules/newEvent';
 
 const getData = (nameEvent, timeEvent, dayEvent, userEvent) => {
   const data = {
-    name: nameEvent.value,
+    title: nameEvent.value,
     time: timeEvent.value,
     day: dayEvent.value,
-    users: userEvent.value,
+    user: userEvent.value,
     id: uuidv4()
   }
   saveData(data);
