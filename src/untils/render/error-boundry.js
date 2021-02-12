@@ -1,3 +1,5 @@
+import { toogleState } from '../../modules/index';
+
 export const errorBoundry = (msg) => {
     const errorWrapper = document.createElement('div');
     const errorTitle = document.createElement('p');
@@ -12,6 +14,10 @@ export const errorBoundry = (msg) => {
 
     errorWrapper.append(errorTitle);
     errorWrapper.append(errorClose);
+    
+    errorClose.addEventListener('click', () => {
+        toogleState('.error');
+    })
 
     return errorWrapper;
 }
