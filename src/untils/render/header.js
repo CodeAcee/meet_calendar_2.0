@@ -1,5 +1,6 @@
 import { users } from '../constant';
 import { toogleState } from '../../modules/index';
+import { filter } from '../../modules/table';
 
 export const header = () => {
     const headerWrapper = document.createElement('div');
@@ -35,6 +36,8 @@ export const header = () => {
     headerControl.append(headerEventButton);
     headerWrapper.append(headerTitle);
     headerWrapper.append(headerControl);
+
+    headerSelect.addEventListener('click', filter(headerSelect));
 
     return headerWrapper;
 }
