@@ -2,7 +2,7 @@ import { data, times, days } from '../constant';
 import { toogleState } from '../../modules/index';
 import { modal } from './modal';
 
-export const table = (eventData) => {
+export const table = (data) => {
   const table = document.createElement('table');
   const tableBody = document.createElement('tbody');
   const tableHead = document.createElement('thead');
