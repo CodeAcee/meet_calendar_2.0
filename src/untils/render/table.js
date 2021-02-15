@@ -1,4 +1,4 @@
-import { data, times, days } from '../constant';
+import { times, days } from '../constant';
 import { toogleState } from '../../modules/index';
 import { modal } from './modal';
 
@@ -33,11 +33,11 @@ export const table = (data) => {
   table.append(tableHead);
   table.append(tableBody);
 
-  table.onclick = (e) => {
-    let target = e.target.textContent
-    modal(target);
-    console.log(target);
+  tableBody.onclick = (event) => {
+    if (event.target.textContent !== '' || event.target.tagName === 'TD') {
+    tableBody.append(modal(event));
     toogleState('.modal');
+    }
   };
   
   return table;

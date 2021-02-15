@@ -1,14 +1,11 @@
-import { data } from '../untils/constant';
 import { toogleState } from '../modules/index';
 import { table } from '../untils/render/table';
+import { tableData } from '../services/services';
+import { errorBoundry } from '../untils/render/error-boundry';
+const root = document.getElementById('root');
 
-let tableData = JSON.parse(localStorage.getItem('data'));
-if (!tableData) {
-  tableData = data;
-  localStorage.setItem('data', JSON.stringify(data));
-}
-
-const showErrr = (msg) => {
+const showErr = (msg) => {
+  root.append(errorBoundry(msg));
   toogleState('.error')
 }
 
@@ -19,17 +16,16 @@ const emptyCheck = (value) => {
     && value.day.length !== 0) {
       return true;
     }
-    showErrr();
+    showErr('All place required');
   }
 
 export const saveData = (obj) => {
     if(emptyCheck(obj)) {
       tableData[obj.day].push(obj);
-        localStorage.setItem('data', JSON.stringify(tableData));
-        tableData = JSON.parse(localStorage.getItem('data'));
+      localStorage.setItem('data', JSON.stringify(tableData));
+      table(JSON.parse(localStorage.getItem('data')))
     }
-  console.log(JSON.parse(localStorage.getItem('data')));
-    showErrr();
+    showErr('Place is booked');
     return tableData
 }
 

@@ -1,9 +1,10 @@
 import { toogleState } from '../../modules/index';
+import { remove } from '../../modules/table';
 
-export const modal = (name) => {
+export const modal = (event) => {
     const modalWrapper = document.createElement('div');
     const btnWrapper = document.createElement('div');
-    const modalTitle = document.createElement('p');
+    let modalTitle = document.createElement('p');
     const modalBtnYes = document.createElement('button');
     const modalBtnNo = document.createElement('button');
 
@@ -14,7 +15,7 @@ export const modal = (name) => {
     modalBtnYes.setAttribute('class', 'btn modal__btn--yes');
     modalBtnNo.setAttribute('class', 'btn modal__btn--no');
 
-    modalTitle.textContent = `Are you sure want delete ${name} ?`;
+    modalTitle.textContent = `Are you sure want delete ${event.target.textContent} ?`;
     modalBtnYes.textContent = 'Yes';
     modalBtnNo.textContent = 'No';
 
@@ -24,12 +25,13 @@ export const modal = (name) => {
     modalWrapper.append(btnWrapper);
 
     modalBtnNo.addEventListener('click', () => {
-        toogleState('.modal')
-    })
+        modalWrapper.remove();
+    }); 
 
     modalBtnYes.addEventListener('click', () => {
-        toogleState('.modal')
-    })
+        remove(event.target.id)
+        modalWrapper.remove();
+    });
     return modalWrapper;
 }   
 
