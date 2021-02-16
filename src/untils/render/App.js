@@ -1,4 +1,4 @@
-import { header, errorBoundry, newEvent, table, modal} from './index';
+import { header, newEvent, table} from './index';
 import { tableData } from '../../services/services';
 export const render = () => {
     const app = document.getElementById('root');

@@ -23,7 +23,7 @@ export const saveData = (obj) => {
     if(emptyCheck(obj)) {
       tableData[obj.day].push(obj);
       localStorage.setItem('data', JSON.stringify(tableData));
-      table(JSON.parse(localStorage.getItem('data')))
+      table()
     }
     showErr('Place is booked');
     return tableData
@@ -34,3 +34,4 @@ export const saveData = (obj) => {
 // 2 Подкл библиотечку;
 // 3 Евент на модалку;
 // 4 Почему клик только со второго раза 
+// 5 По одной колонке в каждую стр

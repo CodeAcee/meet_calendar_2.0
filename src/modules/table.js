@@ -1,6 +1,7 @@
-import { days } from '../untils/constant'
-import { tableData } from '../services/services'
-import { table } from '../untils/render/table'
+import { days } from '../untils/constant';
+import { tableData } from '../services/services';
+import { table } from '../untils/render/table';
+
 export const remove = (idx) => {
   days.forEach((day) => {
     tableData[day] = tableData[day].filter((eventObj) => eventObj.id !== idx)
@@ -17,13 +18,9 @@ export const filter = (elem) => {
       })
       return acc
     }, {})
-    return table(selecedDataByUser)
+    console.log(selecedDataByUser);
+    return table(selecedDataByUser);
   })
 }
 
-export const clear = () => {
-  tableBody.innerHTML = ''
-  tableHead.innerHTML = '<th>Name</th>'
-}
 
-//   export {clear, filter, remove};

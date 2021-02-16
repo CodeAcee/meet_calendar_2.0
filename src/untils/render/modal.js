@@ -29,8 +29,9 @@ export const modal = (event) => {
     }); 
 
     modalBtnYes.addEventListener('click', () => {
-        remove(event.target.id)
+        remove(event.target.id);
         modalWrapper.remove();
+        document.getElementById(event.target.id).remove();
     });
     return modalWrapper;
 }   
